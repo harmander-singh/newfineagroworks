@@ -475,15 +475,34 @@
 
     <div class="services-wrap a4">
         <div class="svc-label">Our Specialities</div>
-        <div class="pills">
-            <div class="pill"><i class="fas fa-tractor"></i> ਕਲਟੀਵੇਟਰ</div>
-            <div class="pill"><i class="fas fa-rotate"></i> ਰੋਟਾਵੇਟਰ</div>
-            <div class="pill"><i class="fas fa-seedling"></i> ਸੀਡ ਡ੍ਰਿੱਲ</div>
-            <div class="pill"><i class="fas fa-grip-lines"></i> ਹਲ</div>
-            <div class="pill"><i class="fas fa-table-cells"></i> ਸੁਹਾਗਾ</div>
-            <div class="pill"><i class="fas fa-spray-can"></i> ਸਪਰੇਅ ਪੰਪ</div>
-            <div class="pill"><i class="fas fa-wrench"></i> ਮੁਰੰਮਤ</div>
-        </div>
+       <div class="pills">
+    <!-- cultivator -->
+    <div class="pill"><i class="fas fa-tractor"></i> ਕਲਟੀਵੇਟਰ</div>
+    
+    <!-- rotavator -->
+    <div class="pill"><i class="fas fa-gears"></i> ਰੋਟਾਵੇਟਰ</div>
+    
+    <!-- seeddrill -->
+    <div class="pill"><i class="fas fa-seedling"></i> ਸੀਡ ਡ੍ਰਿੱਲ ਮਸ਼ੀਨ</div>
+    
+    <!-- plough -->
+    <div class="pill"><i class="fas fa-screwdriver-wrench"></i> ਪਲਟਾਵਾਂ ਹਲ</div>
+    
+    <!-- suhaga -->
+    <div class="pill"><i class="fas fa-window-minimize"></i> ਸੁਹਾਗਾ</div>
+    
+    <!-- spraypump -->
+    <div class="pill"><i class="fas fa-faucet-drip"></i> ਸਪਰੇਅ ਪੰਪ</div>
+    
+    <!-- boomsprayer -->
+    <div class="pill"><i class="fas fa-shower"></i> ਬੂਮ ਸਪ੍ਰੇਅਰ</div>
+    
+    <!-- taviya -->
+    <div class="pill"><i class="fas fa-circle-dot"></i> ਤਵੀਆਂ</div>
+    
+    <!-- maintenance/repair -->
+    <div class="pill"><i class="fas fa-wrench"></i> ਮੁਰੰਮਤ</div>
+</div>
     </div>
 
     <div class="sec-label a5">
@@ -602,37 +621,45 @@
 const CFG = {
     phone: '917296872568',
     hours: { open: 9, close: 20, days: [1,2,3,4,5,6], tz: 'Asia/Kolkata' },
-    machines: {
-        cultivator: { 
-            pa: 'ਕਲਟੀਵੇਟਰ', en: 'Cultivator',
-            icon: '🚜', use: 'ਮਿੱਟੀ ਤੋੜਨਾ ਅਤੇ ਨਦੀਨ ਸਾਫ਼ ਕਰਨ ਲਈ',
-            feats: ['7 / 9 / 11 Tyne', 'Heavy Duty Frame', 'Spring / Rigid Tyne', 'All Tractors Fit']
-        },
-        rotavator: { 
-            pa: 'ਰੋਟਾਵੇਟਰ', en: 'Rotavator',
-            icon: '⚙️', use: 'ਜ਼ਮੀਨ ਵਾਹੁਣ ਅਤੇ ਮਿੱਟੀ ਬਰੀਕ ਕਰਨ ਲਈ',
-            feats: ['4ft / 5ft / 6ft / 7ft', 'Side Gear Box', 'L-Blades', 'PTO Driven']
-        },
-        seeddrill: { 
-            pa: 'ਸੀਡ ਡ੍ਰਿੱਲ ਮਸ਼ੀਨ', en: 'Seed Drilling Machine',
-            icon: '🌱', use: 'ਕਣਕ, ਝੋਨਾ, ਸਰ੍ਹੋਂ ਬੀਜਣ ਲਈ',
-            feats: ['9 / 11 / 13 Tyne', 'Seed + Fertilizer', 'Zero Till Option', 'Cast Iron Box']
-        },
-        plough: { 
-            pa: 'ਹਲ', en: 'Plough',
-            icon: '🔧', use: 'ਡੂੰਘੀ ਵਾਹੀ ਅਤੇ ਮਿੱਟੀ ਪਲਟਨ ਲਈ',
-            feats: ['2 / 3 Bottom', 'Heavy Duty', 'Reversible', 'Deep Tillage']
-        },
-        harrow: { 
-            pa: 'ਸੁਹਾਗਾ', en: 'Harrow',
-            icon: '⭕', use: 'ਮਿੱਟੀ ਬਰਾਬਰ ਕਰਨ ਅਤੇ ਫ਼ਸਲ ਦੀ ਰਹਿੰਦ-ਖੂੰਹਦ ਮਿਲਾਉਣ ਲਈ',
-            feats: ['16 / 20 / 24 Disc', 'Offset / Tandem', 'Notched Disc', 'All Soils']
-        },
-        spraypump: { 
-            pa: 'ਸਪਰੇਅ ਪੰਪ', en: 'Spray Pump',
-            icon: '💦', use: 'ਕੀਟਨਾਸ਼ਕ ਅਤੇ ਖਾਦ ਦੇ ਛਿੜਕਾਅ ਲਈ',
-            feats: ['Tractor Mounted', 'High Pressure', '200L / 400L Tank', 'Boom / Spray Gun']
-        }
+    cultivator: { 
+        pa: 'ਕਲਟੀਵੇਟਰ', en: 'Cultivator',
+        icon: '🚜', use: 'ਮਿੱਟੀ ਤੋੜਨਾ ਅਤੇ ਨਦੀਨ ਸਾਫ਼ ਕਰਨ ਲਈ',
+        feats: ['9 / 11 / 13 Tyne', 'Heavy Duty Frame', 'C-Shape / Rigid Tyne', 'All Tractors Fit']
+    },
+    rotavator: { 
+        pa: 'ਰੋਟਾਵੇਟਰ', en: 'Rotavator',
+        icon: '⚙️', use: 'ਜ਼ਮੀਨ ਵਾਹੁਣ ਅਤੇ ਮਿੱਟੀ ਬਰੀਕ ਕਰਨ ਲਈ',
+        feats: ['5ft / 6ft / 7ft / 8ft', 'Side Gear Box', 'L-Blades', 'PTO Driven']
+    },
+    seeddrill: { 
+        pa: 'ਸੀਡ ਡ੍ਰਿੱਲ ਮਸ਼ੀਨ', en: 'Seed Drilling Machine',
+        icon: '🌱', use: 'ਕਣਕ, ਝੋਨਾ, ਸਰ੍ਹੋਂ ਬੀਜਣ ਲਈ',
+        feats: ['11 / 13 / 15 Tyne', 'Seed + Fertilizer', 'Zero Till Option', 'Cast Iron Box']
+    },
+    plough: { 
+        pa: 'ਪਲਟਾਵਾਂ ਹਲ (MB Plough)', en: 'M.B. Plough',
+        icon: '🔧', use: 'ਡੂੰਘੀ ਵਾਹੀ ਅਤੇ ਮਿੱਟੀ ਪਲਟਨ ਲਈ',
+        feats: ['2 / 3 Bottom', 'Heavy Duty', 'Hydraulic Reversible', 'Deep Tillage']
+    },
+    suhaga: { 
+        pa: 'ਸੁਹਾਗਾ', en: 'Wooden / Iron Plank (Leveler)',
+        icon: '🪵', use: 'ਮਿੱਟੀ ਨੂੰ ਪੱਧਰਾ ਕਰਨ ਅਤੇ ਨਮੀ ਬਚਾਉਣ ਲਈ', 
+        feats: ['Heavy Wood or Iron', 'Soil Leveling', 'Moisture Retention', 'Traditional & Hydraulic']
+    },
+    spraypump: { 
+        pa: 'ਸਪਰੇਅ ਪੰਪ', en: 'Spray Pump',
+        icon: '💦', use: 'ਕੀਟਨਾਸ਼ਕ ਅਤੇ ਖਾਦ ਦੇ ਛਿੜਕਾਅ ਲਈ',
+        feats: ['Tractor Mounted', 'High Pressure', '500L / 600L / 1000L Tank', 'Boom / Spray Gun']
+    },
+    boomsprayer: { 
+        pa: 'ਬੂਮ ਸਪ੍ਰੇਅਰ', en: 'Tractor Boom Sprayer',
+        icon: '🚿', use: 'ਵੱਡੇ ਖੇਤਾਂ ਵਿੱਚ ਤੇਜ਼ੀ ਨਾਲ ਸਪਰੇਅ ਕਰਨ ਲਈ',
+        feats: ['500L / 600L Tank', 'Wide Folding Boom', 'Heavy Duty Nozzles', 'Tractor PTO Fit']
+    },
+    taviya: { 
+        pa: 'ਤਵੀਆਂ (ਡਿਸਕ ਹੈਰੋ)', en: 'Disc Harrow',
+        icon: '🚜', use: 'ਮਿੱਟੀ ਦੇ ਡੇਲੇ ਭੰਨਣ, ਨਦੀਨ ਖ਼ਤਮ ਕਰਨ ਅਤੇ ਪਰਾਲੀ ਨੂੰ ਵਿੱਚ ਮਿਲਾਉਣ ਲਈ', 
+        feats: ['12 to 24 Discs Options', 'Heavy Duty Pipe Frame', 'High-Quality Boron Steel Discs', 'Offset / Tandem Hydraulic Option']
     }
 };
 
