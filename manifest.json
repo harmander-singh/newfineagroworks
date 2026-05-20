@@ -1,0 +1,21 @@
+{
+  "name": "New Fine Agro Works",
+  "short_name": "New Fine Agro",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#062b1a",
+  "theme_color": "#062b1a",
+  "description": "Modern Farm Machinery & Repair Workshop in Talwandi Bhai.",
+  "icons": [
+    {
+      "src": "newfinelogo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "newfinelogo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
