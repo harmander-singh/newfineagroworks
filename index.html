@@ -115,8 +115,8 @@
         }
 
         /* ═══════════════════════════════════════════
-           SPLASH SCREEN
-           ═══════════════════════════════════════════ */
+            SPLASH SCREEN
+            ═══════════════════════════════════════════ */
         #splash {
             position: fixed;
             inset: 0;
@@ -127,7 +127,6 @@
             align-items: center;
             justify-content: center;
             gap: 0;
-            /* fade-out class added by JS */
             transition: opacity 0.55s ease, visibility 0.55s ease;
         }
 
@@ -137,7 +136,6 @@
             pointer-events: none;
         }
 
-        /* diagonal texture same as main page */
         #splash::before {
             content: '';
             position: absolute; inset: 0;
@@ -148,7 +146,6 @@
             pointer-events: none;
         }
 
-        /* top + bottom gold bars */
         .splash-bar-top,
         .splash-bar-bottom {
             position: absolute;
@@ -158,7 +155,6 @@
         .splash-bar-top    { top: 0; }
         .splash-bar-bottom { bottom: 0; }
 
-        /* skip button */
         #splashSkip {
             position: absolute;
             top: 20px; right: 20px;
@@ -172,12 +168,11 @@
             border-radius: 50px;
             padding: 6px 14px;
             cursor: pointer;
-            z-index: 1;
+            z-index: 2;
             transition: color .2s, background .2s;
         }
         #splashSkip:active { color: var(--gold); background: rgba(245,166,35,0.15); }
 
-        /* splash content wrapper — animates in */
         .splash-content {
             position: relative; z-index: 1;
             display: flex; flex-direction: column;
@@ -190,7 +185,6 @@
             to   { opacity: 1; transform: translateY(0)    scale(1);    }
         }
 
-        /* logo in splash */
         .splash-logo-wrap {
             position: relative;
             width: 108px; height: 108px;
@@ -223,7 +217,6 @@
             display: none;
         }
 
-        /* brand name */
         .splash-name {
             font-family: 'Barlow Condensed', sans-serif;
             font-size: 30px; font-weight: 800;
@@ -233,7 +226,6 @@
         }
         .splash-name span { color: var(--gold); }
 
-        /* Punjabi tagline */
         .splash-pa {
             font-family: 'Noto Sans Gurmukhi', sans-serif;
             font-size: 16px; font-weight: 600;
@@ -242,7 +234,6 @@
             text-align: center;
         }
 
-        /* location sub */
         .splash-loc {
             font-size: 12px; font-weight: 500;
             letter-spacing: 2px; text-transform: uppercase;
@@ -251,7 +242,6 @@
             text-align: center;
         }
 
-        /* progress bar */
         .splash-progress-wrap {
             width: 140px; height: 2px;
             background: rgba(245,166,35,0.15);
@@ -268,7 +258,6 @@
             to   { width: 100%; }
         }
 
-        /* speaker button */
         #splashSound {
             display: flex; align-items: center; gap: 8px;
             margin-top: 20px;
@@ -301,7 +290,6 @@
             50%      { box-shadow: 0 0 0 6px rgba(245,166,35,0); }
         }
 
-        /* gear watermark */
         .splash-gear {
             position: absolute;
             font-size: 320px;
@@ -341,7 +329,7 @@
         .nfc-signal {
             display: flex; align-items: center; gap: 7px;
             font-family: 'Barlow Condensed', sans-serif;
-            font-size: 12px; font-weight: 700; letter-spacing: 2.5px; /* ← was 11px */
+            font-size: 12px; font-weight: 700; letter-spacing: 2.5px;
             text-transform: uppercase; color: var(--gold-dim);
         }
         .nfc-dot {
@@ -358,7 +346,7 @@
         .machine-badge.visible { display: flex; }
         .machine-badge i    { color: var(--gold); font-size: 12px; }
         .machine-badge .pa  { font-family: 'Noto Sans Gurmukhi', sans-serif; font-size: 14px; font-weight: 700; color: var(--gold); }
-        .machine-badge .en  { color: var(--text-muted); font-size: 12px; font-weight: 500; } /* ← was 11px */
+        .machine-badge .en  { color: var(--text-muted); font-size: 12px; font-weight: 500; }
 
         /* ═══ BRAND PLATE ══════════════════════════ */
         .brand-plate {
@@ -387,7 +375,7 @@
         .status-dot         { width:6px; height:6px; border-radius:50%; }
         .status-pill.open   .status-dot { background:#22c55e; }
         .status-pill.closed .status-dot { background:#F59E0B; }
-        .status-sub { font-size:12px; color:var(--text-muted); font-weight:500; } /* ← was 11px */
+        .status-sub { font-size:12px; color:var(--text-muted); font-weight:500; }
 
         .logo-wrap        { position:relative; width:90px; height:90px; margin:0 auto 16px; }
         .logo-ring-outer  { position:absolute; inset:-5px; border-radius:50%; border:2px solid transparent; background:linear-gradient(135deg,var(--gold),var(--gold-dim),transparent 60%) border-box; animation:spin 9s linear infinite; }
@@ -397,7 +385,7 @@
 
         h1                { font-family:'Barlow Condensed',sans-serif; font-size:25px; font-weight:800; letter-spacing:1.5px; text-transform:uppercase; line-height:1.1; margin-bottom:5px; }
         h1 span           { color:var(--gold); }
-        .tagline          { font-size:12px; letter-spacing:3px; text-transform:uppercase; color:var(--text-muted); font-weight:600; margin-bottom:16px; } /* ← was 11px */
+        .tagline          { font-size:12px; letter-spacing:3px; text-transform:uppercase; color:var(--text-muted); font-weight:600; margin-bottom:16px; }
 
         .div-row          { display:flex; align-items:center; gap:10px; margin-bottom:16px; }
         .div-line         { flex:1; height:1px; background:rgba(245,166,35,.18); }
@@ -409,14 +397,14 @@
 
         /* ═══ SERVICES STRIP ══════════════════════ */
         .services-wrap   { width:100%; max-width:400px; }
-        .svc-label       { font-family:'Barlow Condensed',sans-serif; font-size:11px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:var(--text-muted); margin-bottom:8px; text-align:center; } /* ← was 10px */
+        .svc-label       { font-family:'Barlow Condensed',sans-serif; font-size:11px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:var(--text-muted); margin-bottom:8px; text-align:center; }
         .pills           { display:flex; flex-wrap:wrap; gap:7px; justify-content:center; }
-        .pill            { display:flex; align-items:center; gap:5px; background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.1); border-radius:50px; padding:5px 12px; font-size:13px; font-weight:600; color:var(--text-muted); white-space:nowrap; } /* ← was 12px */
+        .pill            { display:flex; align-items:center; gap:5px; background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.1); border-radius:50px; padding:5px 12px; font-size:13px; font-weight:600; color:var(--text-muted); white-space:nowrap; }
         .pill i          { font-size:11px; color:var(--gold); }
 
         /* ═══ SECTION LABEL ════════════════════════ */
         .sec-label       { width:100%; max-width:400px; display:flex; align-items:center; gap:10px; }
-        .sec-label span  { font-family:'Barlow Condensed',sans-serif; font-size:11px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:var(--text-muted); white-space:nowrap; } /* ← was 10px */
+        .sec-label span  { font-family:'Barlow Condensed',sans-serif; font-size:11px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:var(--text-muted); white-space:nowrap; }
         .sec-line        { flex:1; height:1px; background:rgba(255,255,255,.07); }
 
         /* ═══ BUTTONS ══════════════════════════════ */
@@ -436,11 +424,10 @@
 
         .btn-icon { width:40px; height:40px; border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:21px; flex-shrink:0; background:rgba(0,0,0,.22); }
         .btn-txt  { display:flex; flex-direction:column; gap:2px; flex:1; }
-        .btn-pa   { font-family:'Noto Sans Gurmukhi',sans-serif; font-size:17px; font-weight:700; color:white; line-height:1.2; } /* ← was 15px */
-        .btn-en   { font-size:12px; font-weight:600; letter-spacing:.7px; text-transform:uppercase; color:rgba(255,255,255,.52); } /* ← was 10.5px */
+        .btn-pa   { font-family:'Noto Sans Gurmukhi',sans-serif; font-size:17px; font-weight:700; color:white; line-height:1.2; }
+        .btn-en   { font-size:12px; font-weight:600; letter-spacing:.7px; text-transform:uppercase; color:rgba(255,255,255,.52); }
         .btn-arr  { margin-left:auto; font-size:13px; color:rgba(255,255,255,.28); flex-shrink:0; transition:transform .25s ease; }
 
-        /* button themes */
         .btn-wa   { background:linear-gradient(135deg,#1A8C40,#0D5C2B); border-color:rgba(37,211,102,.32); box-shadow:0 6px 22px rgba(18,140,78,.3),0 2px 6px rgba(0,0,0,.4); padding:17px 18px; }
         .wa-live  { position:absolute; top:-2px; right:-2px; width:11px; height:11px; border-radius:50%; background:#25D366; border:2px solid var(--bg-deep); animation:wapg 2.8s ease-in-out infinite; }
         .btn-save { background:linear-gradient(135deg,#1A3560,#0E1F3E); border-color:rgba(99,150,240,.28); box-shadow:0 5px 18px rgba(20,80,200,.18),0 2px 6px rgba(0,0,0,.4); }
@@ -492,7 +479,6 @@
     <button id="splashSkip">Skip</button>
 
     <div class="splash-content">
-
         <!-- logo -->
         <div class="splash-logo-wrap">
             <div class="splash-ring"></div>
@@ -522,7 +508,6 @@
             <i class="fas fa-volume-high" id="soundIcon"></i>
             <span id="soundLabel">Tap to hear welcome</span>
         </button>
-
     </div>
 </div>
 
@@ -532,7 +517,6 @@
 <div class="top-bar"></div>
 
 <div class="page">
-
     <div class="nfc-signal a1">
         <div class="nfc-dot"></div>
         <span>NFC · Connected</span>
@@ -545,7 +529,6 @@
     </div>
 
     <div class="brand-plate a2">
-
         <div class="status-row">
             <div class="status-pill" id="statusPill">
                 <div class="status-dot"></div>
@@ -600,7 +583,6 @@
     </div>
 
     <div class="btn-group a4">
-
         <a id="waBtn" href="#" class="btn btn-wa">
             <div class="btn-icon" style="position:relative">
                 <i class="fab fa-whatsapp" style="color:#25D366"></i>
@@ -710,22 +692,24 @@
         <div class="footer-name">New Fine Agro Works</div>
         <div class="footer-loc">Talwandi Bhai · Ferozepur, Punjab · India</div>
     </div>
-
 </div>
 
 <script>
 /* ═══════════════════════════════════════════════════════
    SOUND — Web Speech API welcome message
-   English first, then Punjabi
    ═══════════════════════════════════════════════════════ */
 const WELCOME_EN = 'Welcome to New Fine Agro Works, Talwandi Bhai, Ferozepur';
 const WELCOME_PA = 'ਨਿਊ ਫਾਈਨ ਐਗਰੋ ਵਰਕਸ ਵਿੱਚ ਤੁਹਾਡਾ ਸੁਆਗਤ ਹੈ';
 
 let soundPlayed = false;
 
-function speakWelcome(fromBtn) {
-    if (!window.speechSynthesis) return;
-    if (soundPlayed && !fromBtn) return; /* autoplay only fires once */
+// Added an onComplete callback parameter to dismiss the splash screen
+function speakWelcome(fromBtn, onComplete) {
+    if (!window.speechSynthesis) {
+        if(onComplete) onComplete();
+        return;
+    }
+    if (soundPlayed && !fromBtn) return;
 
     const btn   = document.getElementById('splashSound');
     const icon  = document.getElementById('soundIcon');
@@ -733,27 +717,25 @@ function speakWelcome(fromBtn) {
 
     window.speechSynthesis.cancel();
 
-    /* English utterance */
     const eng  = new SpeechSynthesisUtterance(WELCOME_EN);
     eng.lang   = 'en-IN';
     eng.rate   = 0.88;
     eng.pitch  = 1.05;
 
-    /* Punjabi utterance */
     const pa   = new SpeechSynthesisUtterance(WELCOME_PA);
     pa.lang    = 'pa-IN';
     pa.rate    = 0.82;
     pa.pitch   = 1;
 
-    /* UI — playing state */
     if (btn) {
         btn.classList.add('playing');
-        icon.className  = 'fas fa-waveform-lines';
+        icon.className  = 'fas fa-volume-up';
         label.textContent = 'Playing...';
     }
 
     eng.onstart = () => { soundPlayed = true; };
 
+    // When the Punjabi voice finishes, update the UI and trigger the dismiss callback
     pa.onend = () => {
         if (btn) {
             btn.classList.remove('playing');
@@ -761,9 +743,9 @@ function speakWelcome(fromBtn) {
             icon.className  = 'fas fa-check';
             label.textContent = 'Played';
         }
+        if(onComplete) onComplete();
     };
 
-    /* if Punjabi voice not available, fallback gracefully */
     pa.onerror = () => {
         if (btn) {
             btn.classList.remove('playing');
@@ -771,6 +753,7 @@ function speakWelcome(fromBtn) {
             icon.className  = 'fas fa-check';
             label.textContent = 'Played';
         }
+        if(onComplete) onComplete();
     };
 
     window.speechSynthesis.speak(eng);
@@ -778,12 +761,11 @@ function speakWelcome(fromBtn) {
 }
 
 /* ═══════════════════════════════════════════════════════
-   SPLASH — auto-dismiss after 1.6s, skip button works immediately
+   SPLASH — Auto-dismiss logic with Interaction Autoplay
    ═══════════════════════════════════════════════════════ */
 (function () {
     const splash = document.getElementById('splash');
     const skip   = document.getElementById('splashSkip');
-    const sndBtn = document.getElementById('splashSound');
 
     function dismissSplash() {
         window.speechSynthesis && window.speechSynthesis.cancel();
@@ -791,27 +773,26 @@ function speakWelcome(fromBtn) {
         setTimeout(() => splash.remove(), 600);
     }
 
-    /* try autoplay immediately — browsers may block this */
+    // Failsafe timer: Auto-dismiss after 2.5s if the user does NOTHING
+    let autoTimer = setTimeout(dismissSplash, 2500);
+
+    // 1. Try background autoplay (Works on Desktop, Blocked on Mobile)
     try { speakWelcome(false); } catch (_) {}
 
-    /* also try on first user interaction with the splash
-       (catches cases where autoplay was blocked) */
-    splash.addEventListener('pointerdown', function tryOnInteract() {
-        if (!soundPlayed) speakWelcome(false);
-        splash.removeEventListener('pointerdown', tryOnInteract);
+    // 2. Interaction Autoplay (The Mobile Fix): Play on ANY tap, then dismiss
+    splash.addEventListener('click', function tryOnInteract(e) {
+        if (e.target === skip) return; // Let the skip button do its own job
+
+        if (!soundPlayed) {
+            clearTimeout(autoTimer); // Stop the failsafe timer
+            // Play the audio, and pass dismissSplash as the onComplete callback
+            speakWelcome(false, dismissSplash);
+        }
     }, { once: true });
 
-    /* speaker button — always works on tap */
-    sndBtn.addEventListener('click', function (e) {
+    // Skip button immediately closes without waiting for audio
+    skip.addEventListener('click', function (e) {
         e.stopPropagation();
-        speakWelcome(true);
-    });
-
-    /* auto-dismiss at 1.6s */
-    const autoTimer = setTimeout(dismissSplash, 1600);
-
-    /* skip button */
-    skip.addEventListener('click', function () {
         clearTimeout(autoTimer);
         dismissSplash();
     });
@@ -824,7 +805,7 @@ const CFG = {
     phone: '917296872568',
     hours: { open: 8, close: 19, days: [1,2,3,4,5,6], tz: 'Asia/Kolkata' },
     machines: {
-        cultivator: { pa: 'ਕਲਟੀਵੇਟਰ',        en: 'Cultivator'           },
+        cultivator: { pa: 'ਕਲਟੀਵੇਟਰ',       en: 'Cultivator'           },
         rotavator:  { pa: 'ਰੋਟਾਵੇਟਰ',         en: 'Rotavator'            },
         seeddrill:  { pa: 'ਸੀਡ ਡ੍ਰਿੱਲ ਮਸ਼ੀਨ', en: 'Seed Drilling Machine' },
         plough:     { pa: 'ਹਲ',               en: 'Plough'               },
