@@ -5,7 +5,7 @@ const urlsToCache = [
   './newfinelogo.png'
 ];
 
-// Install Event: Caches the files
+// Install Event: Runs when the app is first installed, saves assets offline
 self.addEventListener('install', event => {
   event.waitUntil(
     caches.open(CACHE_NAME)
@@ -16,7 +16,7 @@ self.addEventListener('install', event => {
   );
 });
 
-// Activate Event: Clears out old caches when you update to v2, v3, etc.
+// Activate Event: Clears old caches instantly if you ever update CACHE_NAME
 self.addEventListener('activate', event => {
   const cacheWhitelist = [CACHE_NAME];
   event.waitUntil(
@@ -33,13 +33,27 @@ self.addEventListener('activate', event => {
   );
 });
 
-// Fetch Event: Serves cached files if offline
+// Fetch Event: Network-First Strategy
+// Auto-refreshes text/products when online, falls back to saved data when offline in fields
 self.addEventListener('fetch', event => {
+  // Skip non-http requests (like browser extensions) to prevent errors
+  if (!event.request.url.startsWith('http')) return;
+
   event.respondWith(
-    caches.match(event.request)
-      .then(response => {
-        // Return the cached version if found, otherwise fetch from the network
-        return response || fetch(event.request);
+    fetch(event.request)
+      .then(networkResponse => {
+        // If the network request is successful, update the cache with the fresh file
+        if (networkResponse && networkResponse.status === 200) {
+          const responseClone = networkResponse.clone();
+          caches.open(CACHE_NAME).then(cache => {
+            cache.put(event.request, responseClone);
+          });
+        }
+        return networkResponse;
+      })
+      .catch(() => {
+        // If the network fails (no internet signal), load the cached asset
+        return caches.match(event.request);
       })
   );
 });
